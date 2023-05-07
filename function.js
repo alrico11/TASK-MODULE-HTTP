@@ -64,7 +64,7 @@ function postStock(body, callback) {
                 body: changeId(stock)
             };
             callback(result);
-        }else {
+        } else {
             cekData()
             const stock = JSON.parse(body);
             stock.id = generateId();
@@ -139,6 +139,24 @@ function deleteStock(body, callback) {
         callback(result);
     }
 }
+function deleteOne({ id }, callback) {
+    cekData();
+    const index = stocks.findIndex((s) => s.id === id);
+    if (index >= 0) {
+        stocks.splice(index, 1);
+        saveData();
+        const result = {
+            message: `Data stock dengan id ${id} berhasil dihapus`,
+        };
+        callback(result);
+    } else {
+        const result = {
+            message: 'Data stock tidak ditemukan',
+        };
+        callback(result);
+    }
+}
+
 
 function getOne({ id }, callback) {
     cekData();
@@ -162,5 +180,6 @@ module.exports = {
     getStocks,
     updateStock,
     deleteStock,
-    getOne
+    getOne,
+    deleteOne
 }
