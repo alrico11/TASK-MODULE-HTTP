@@ -1,0 +1,1 @@
+[{"id":1,"nama":"JAJAN CIKI","price":1000,"qty":2},{"id":2,"nama":"DONATTT","price":500,"qty":2},{"id":3,"nama":"DONATTT","price":500,"qty":2},{"id":4,"nama":"DONATTT","price":500,"qty":2},{"id":5,"nama":"DONATTT","price":500,"qty":2},{"id":6,"nama":"CIRENG","price":500,"qty":2}]
